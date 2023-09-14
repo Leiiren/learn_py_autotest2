@@ -3,3 +3,6 @@ def test_equal():
 
 def test_equa2():
     assert 1 != 2, "Number is not equal to expected"
+
+def test_equa3():
+    assert 3 != 2, "Number is not equal to expected"
