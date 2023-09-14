@@ -3,4 +3,5 @@
 В названии функции обязательно должно быть вначале слово test
 
 Запуск тестов
-pytest -s -v tests/*
+pytest -s -v tests/* (всех, но запустятся дважды из за init)
+ pytest -s -v tests/test_something.py
