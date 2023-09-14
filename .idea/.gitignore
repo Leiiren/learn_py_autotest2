@@ -1,3 +1,9 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+
+# Ignored venv
+venv/
+**venv/
+venv/**/activate
