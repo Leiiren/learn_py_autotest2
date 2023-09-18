@@ -1,21 +1,14 @@
-# https://send-request.me/api/companies
-# https://send-request.me/api/users
-# https://send-request.me/
-
 import requests
-from configurations import SERVICE_URL
-from src.enums.global_enums import GlobalErrorsMessages
-import json
 
+from configurations import SERVICE_URL
+from jsonschema import validate
+
+from src.schemas.post import POST_SCHEMA_GET_COMPANIES
+from src.baseclasses.response import Response
 
 def test_getting_post():
-    response = requests.get(url=SERVICE_URL)
-    received_post = response.json()
-
-    assert response.status_code == 200, GlobalErrorsMessages.WRONG_STASUS_CODE.value
-    assert len(received_post) == 2, GlobalErrorsMessages.WRONG_ELEMENT_COUNT.value
-    print(response.json())
-
-
-def test_equal():
-    assert 1 == 1, "Number is not equal to expected"
+    r = requests.get(url=SERVICE_URL)
+    response = Response(r)
+    response.assert_status_code(200).validate(POST_SCHEMA_GET_COMPANIES)
+    print('response:', response.response_json['data'])
+    print('status_code:', response.response_status)

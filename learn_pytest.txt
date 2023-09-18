@@ -4,4 +4,8 @@
 
 Запуск тестов
 pytest -s -v tests/* (всех, но запустятся дважды из за init)
- pytest -s -v tests/test_something.py
+pytest -s -v tests/test_something.py
+
+
+
+# print(response['data']) - залесть внутрь json
