@@ -22,5 +22,3 @@ class Response:
         else:
             assert self.response_status == status_code, GlobalErrorsMessages.WRONG_STASUS_CODE.value
         return self
-
-

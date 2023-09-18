@@ -8,6 +8,7 @@ POST_SCHEMA_GET_COMPANIES = {
     }
 }
 
+
 # tests/test_something.py::test_getting_post
 # {'data': [
 # {'company_id': 1, 'company_name': 'Tesla', 'company_address': 'Nicholastown, IL 80126', 'company_status': 'ACTIVE'},
