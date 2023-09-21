@@ -9,3 +9,14 @@ pytest -s -v tests/test_something.py
 
 
 # print(response['data']) - залесть внутрь json
+
+source ./venv/bin/activate - активировать venv
+
+
+
+
+
+from pydantic import BaseModel, Field
+
+class Post(BaseModel):
+    company_id: int = Field(le=4) # Проверка поля
