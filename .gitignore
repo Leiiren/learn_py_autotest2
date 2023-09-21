@@ -1,3 +1,5 @@
 #~/PycharmProjects/learn_py_autotest2/env/**
 /Users/irishka/PycharmProjects/learn_py_autotest2/env/**
-/env/**
+/env/**/
+/env/
+/env
